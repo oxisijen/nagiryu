@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"魔"</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul>
+          <a href="TOP.html">TOP</a>
+          <a href="PLAN.html">企画概要</a>
+          <li class="menu-item">
+            <a href="SETTING.html">設定</a>
+            <ul class="submenu">
+                <li><a href="SETTING.html">退魔術『那岐流』</a></li>
+                <li><a href="MIKADUTI.html">・御雷</a></li>
+                <li><a href="OHABARI.html">・尾羽張</a></li>
+                <li><a href="TAMAYORI.html">・玉依</a></li>
+                <li><a href="OUSU.html">・小碓</a></li>
+            </ul>
+          </li>
+          <a href="FAQ.html">FAQ</a>
+          <a href="ENEMY.html">"魔"</a>
+        </ul>
+    </header>
+    <br>
+    <div class="content_ryuhabox">
+    <h1>流派：小碓</h1>
+        <p>人がその叡智と業を極める事で『人のまま人を超え』魔を討つ流派。</p>
+        <p>人外の力とは一切関わりなく、純粋な人の持つ技術や知恵を磨き上げ、人のままに人を超越して魔を下す。
+            ある種、怪異以上に怪異じみた事を成し得る技術や力を見出したもの。</p>
+        <br>
+        <p>血や才能のみに依存しない性質上、流派を統括する本家すらも与り知らぬ分家や派生流派が多い。
+            銃器を扱うモノもあれば、乗物や兵器を持ち出し、もはや退魔術とは思えぬような分派もある。
+            魔を下す為であれば手段を択ばず、他の退魔術の技すら取り込むことに躊躇いがない。</p>
+        <p>ただし、原則的に小碓は『人から踏み外す』ことだけは禁じられている。
+            これは小碓が他三家が魔へと堕ちた場合に、その処分を行なう役割と特権を与えられている為である。
+            木乃伊取りが木乃伊になっては、その使命を果たすことが出来ないのだから。</p>
+        <br>
+        <p>故に、人体改造等の一線を越えた分派も存在こそすれど、彼らが本家になる事は決してない。
+            そうした異端とも言える流派は、そのまま御雷や玉依に吸収されることもある。</p>
+        <br>
+        <p>また、人のまま魔を殺す彼らは、那岐流の中において、最も対人技術に長けている。
+            その鍛錬において人を相手にするのもそうであるが、その分派の術技の多様さがそれを後押ししている。</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_ryuhabox">
+        <h1>小碓：術技一覧</h1>
+        <h2><ruby>動水<rt>どうすい</rt></ruby></h2>
+            <p>那岐流全般に通ずる術技である『水心』と組み合わせる必要がある術技。</p>
+            <p>自身の身体内外、ありとあらゆる筋肉を自由にコントロールすることで血管、臓器の位置を望む方向へずらすことが出来る。
+                人の身で成しえる怪異じみた技術である為、小碓の本家以外が修得するのは困難とされる。</p>
+        <br>
+        <h2><ruby>開悟<rt>かいご</rt></ruby></h2>
+            <p>人体のリミッターを一時的に外す技術。</p>
+            <p>火事場の馬鹿力や、生命の危機を前にして発現するコマ送りのような動体視力を意図的に引き出す。
+                人間が本来持ちえる底力をいつでも十全に扱うことを可能とする。</p>
+        <br>
+        <h2><ruby>陽蛇<rt>ようしゃ</rt></ruby></h2>
+            <p>初撃を防がれた際、視力を奪えるほどの閃光により視界の隙を産み出す術技。</p>
+            <p>追撃を容易にする為の技で在り、汎用性が高く、修得も容易い。
+                本家の指南役である巳言が編み出した。</p>
+        <br>
+        <h2><ruby>蟒月<rt>まんげつ</rt></ruby></h2>
+            <p>敵の攻撃を往なしながらも反撃を狙う。所謂カウンター術技。</p>
+            <p>ただ往なすのではなく、敵の力を利用して自らの力と変じる事を極意とする。
+                極めれば敵の攻撃を余すことなく自身の反撃に上乗せする事すら可能となる。</p>
+    </div>
+    <br>
+<!-- Script -->
+<script>
+    // メニューアイテムをクリックしたときの処理
+    document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // クリックしたアイテムに「active」クラスをトグル
+            this.classList.toggle('active');
+            
+            // 他のメニューアイテムのサブメニューを非表示にする（オプション）
+            document.querySelectorAll('header .menu-item').forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active');
+                }
+            });
+    
+            // サブメニューが表示されているときにクリックした場合、リンクを遷移させる
+            if (this.classList.contains('active')) {
+                event.stopPropagation();
+            }
+        });
+    });
+    
+    // メニュー外をクリックした場合、サブメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .menu-item')) {
+            document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+                menuItem.classList.remove('active');
+            });
+        }
+    });
+    
+    // サブメニューの表示/非表示を切り替える
+    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('mouseenter', function() {
+            this.classList.add('active'); // サブメニューを表示
+        });
+        menuItem.addEventListener('mouseleave', function() {
+            this.classList.remove('active'); // サブメニューを非表示
+        });
+    });
+    
+    // "設定"リンクの遷移を無効にする
+    document.querySelector('a[href="SETTING.html"]').addEventListener('click', function(event) {
+        event.preventDefault(); // これで遷移を防止
+    });
+</script>
+</body>
+</html>

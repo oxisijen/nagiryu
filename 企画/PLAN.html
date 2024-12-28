@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企画概要</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul>
+          <a href="TOP.html">TOP</a>
+          <a href="PLAN.html">企画概要</a>
+          <li class="menu-item">
+            <a href="SETTING.html">設定</a>
+            <ul class="submenu">
+                <li><a href="SETTING.html">退魔術『那岐流』</a></li>
+                <li><a href="MIKADUTI.html">・御雷</a></li>
+                <li><a href="OHABARI.html">・尾羽張</a></li>
+                <li><a href="TAMAYORI.html">・玉依</a></li>
+                <li><a href="OUSU.html">・小碓</a></li>
+            </ul>
+          </li>
+          <a href="FAQ.html">FAQ</a>
+          <a href="ENEMY.html">"魔"</a>
+        </ul>
+    </header>
+    <br>
+    <div class="content_planbox">
+    <h2>企画概要</h2>
+        <p>退魔術『那岐流』。それは”魔”を討つ為に、人を越える術である。</p>
+        <p>それは須らくあらゆる手段、あらゆる術理を用いるもの。</p>
+        <p>研磨と研鑽を繰り返し、長き月日を重ねて体系化された戦闘論理。</p>
+        <p>それは人には過ぎたる殺人技…と言うのも生ぬるい程の術理により成り立っている。</p>
+        <p>人を殺す為ならば、那岐流など必要としない。魔を殺すために、この流派は存在する。</p>
+        <br>
+        <p>そんな那岐流を扱うキャラクターを作ろう！という現代怪奇モノの退魔術あわせ企画です。</p>
+        <p>代々受け継いできた名家や技術、或いはその敵となる存在をアレコレ練り込みましょう！</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_planbox">
+    <h2>レギュレーション</h2>
+        <h3>『那岐流』を扱うキャラクターであること！</h3>
+            <p>当然ですが、退魔術として那岐流を扱うキャラクターでお願いします。</p>
+            <p>流派の本家、或いは分家のキャラクターが推奨となります。</p>
+            <p>那岐流を扱うのであれば、それぞれの家や個人に関連するキャラクターも可能です。</p>
+            <p>それはそれとして、主家となる四家が揃っていると主催は悦びます。</p>
+            <br>
+        <h3>パワーバランス！</h3>
+            <p>チート過ぎず、されどもロマンを感じるパワーバランスでお願いします。</p>
+            <p>独りだけ飛び抜けた能力を持っていたりしないように気を付けましょう。</p>
+            <p>また、基本的に戦闘可能なキャラクターを想定しています。</p>
+            <p>後方支援がメインであっても、最低限の戦闘能力が在ると幸いです。</p>
+            <br>
+        <h3>外部キャラクターの参加について！</h3>
+            <p>企画の性質上、スターシステム等には向きません。</p>
+            <p>原則、新規キャラクターでのご参加をお願いします。</p>
+            <br>
+        <h3>禁止事項！</h3>
+            <p>当然ですが内外問わずトラブルを持ち込まないようにお願い致します。</p>
+            <p>そうした事態が発生した場合も、大人の対応をお願い致します。</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_planbox">
+    <h2>注意事項</h2>
+        <p>『那岐流』をパブリックな共通設定のように取り扱う際にはご注意ください。</p>
+        <p>この企画内での設定は企画内で共有されたものであり、公共の公式設定ではありません。</p>
+        <p>那岐流派あくまで数多にある退魔術の内のひとつ…という扱いでお願い致します。</p>
+        <br>
+        <p>また、当企画は共通した固定の世界観における企画ともまた少々異なります。</p>
+        <p>原則的に舞台が変われば、那岐流の設定は共通しながらも、それは別世界線の事象となるものとします。</p>
+        <p>此方は複数の定期ゲームやPBCで利用可能にするためのものですので、ご理解いただけると幸いです。</p>
+        <p>もちろん、ある程度同様の事象が発生している、と設定するのは周囲の了承があれば問題ありません。</p>
+    </div>
+    <br>
+<!-- Script -->
+<script>
+    // メニューアイテムをクリックしたときの処理
+    document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // クリックしたアイテムに「active」クラスをトグル
+            this.classList.toggle('active');
+            
+            // 他のメニューアイテムのサブメニューを非表示にする（オプション）
+            document.querySelectorAll('header .menu-item').forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active');
+                }
+            });
+    
+            // サブメニューが表示されているときにクリックした場合、リンクを遷移させる
+            if (this.classList.contains('active')) {
+                event.stopPropagation();
+            }
+        });
+    });
+    
+    // メニュー外をクリックした場合、サブメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .menu-item')) {
+            document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+                menuItem.classList.remove('active');
+            });
+        }
+    });
+    
+    // サブメニューの表示/非表示を切り替える
+    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('mouseenter', function() {
+            this.classList.add('active'); // サブメニューを表示
+        });
+        menuItem.addEventListener('mouseleave', function() {
+            this.classList.remove('active'); // サブメニューを非表示
+        });
+    });
+    
+    // "設定"リンクの遷移を無効にする
+    document.querySelector('a[href="SETTING.html"]').addEventListener('click', function(event) {
+        event.preventDefault(); // これで遷移を防止
+    });
+</script>
+</body>
+</html>

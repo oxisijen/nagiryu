@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <ul>
+          <a href="TOP.html">TOP</a>
+          <a href="PLAN.html">企画概要</a>
+          <li class="menu-item">
+            <a href="SETTING.html">設定</a>
+            <ul class="submenu">
+                <li><a href="SETTING.html">退魔術『那岐流』</a></li>
+                <li><a href="MIKADUTI.html">・御雷</a></li>
+                <li><a href="OHABARI.html">・尾羽張</a></li>
+                <li><a href="TAMAYORI.html">・玉依</a></li>
+                <li><a href="OUSU.html">・小碓</a></li>
+            </ul>
+          </li>
+          <a href="FAQ.html">FAQ</a>
+          <a href="ENEMY.html">"魔"</a>
+        </ul>
+    </header>
+    <!-- ここまで -->
+    <br>
+    <div class="content_topbox">
+        <h1 class="highlighted-title">
+            退魔術『<ruby>那岐<rt>なぎ</rt></ruby>流』
+            <span class="small-text">交流創作合わせ企画</span> <!-- 追加する小さな文字 -->
+        </h1>
+        <br>
+        <p>人に仇成す妖魔を討ち払う為、長い歴史の中で研磨し、積み重ねられてきた数多の退魔術。</p>
+        <p>その裡に於いて、那岐流とは”魔”を討つ為の、人を越えた術である。</p>
+        <br>
+        <p class="tyuigaki">※当企画は定期ゲーム及びPBC等における創作合わせ企画です。</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_topbox history">
+    <h2>更新履歴</h2>
+        <div class="history-entry">
+            <h3>2024-12-28</h3>
+            <p>ディザーサイトを公開しました。</p>
+        </div>
+</div>
+<br>
+<!-- Script -->
+<script>
+// メニューアイテムをクリックしたときの処理
+        document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // クリックしたアイテムに「active」クラスをトグル
+            this.classList.toggle('active');
+            
+            // 他のメニューアイテムのサブメニューを非表示にする（オプション）
+            document.querySelectorAll('header .menu-item').forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active');
+                }
+            });
+    
+            // サブメニューが表示されているときにクリックした場合、リンクを遷移させる
+            if (this.classList.contains('active')) {
+                event.stopPropagation();
+            }
+        });
+    });
+    
+    // メニュー外をクリックした場合、サブメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .menu-item')) {
+            document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+                menuItem.classList.remove('active');
+            });
+        }
+    });
+    
+    // サブメニューの表示/非表示を切り替える
+    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('mouseenter', function() {
+            this.classList.add('active'); // サブメニューを表示
+        });
+        menuItem.addEventListener('mouseleave', function() {
+            this.classList.remove('active'); // サブメニューを非表示
+        });
+    });
+    
+    // "設定"リンクの遷移を無効にする
+    document.querySelector('a[href="SETTING.html"]').addEventListener('click', function(event) {
+     event.preventDefault(); // これで遷移を防止
+    });
+</script>
+</body>
+</html>

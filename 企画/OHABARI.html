@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"魔"</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul>
+          <a href="TOP.html">TOP</a>
+          <a href="PLAN.html">企画概要</a>
+          <li class="menu-item">
+            <a href="SETTING.html">設定</a>
+            <ul class="submenu">
+                <li><a href="SETTING.html">退魔術『那岐流』</a></li>
+                <li><a href="MIKADUTI.html">・御雷</a></li>
+                <li><a href="OHABARI.html">・尾羽張</a></li>
+                <li><a href="TAMAYORI.html">・玉依</a></li>
+                <li><a href="OUSU.html">・小碓</a></li>
+            </ul>
+          </li>
+          <a href="FAQ.html">FAQ</a>
+          <a href="ENEMY.html">"魔"</a>
+        </ul>
+    </header>
+    <br>
+    <div class="content_ryuhabox">
+    <h1>流派：尾羽張</h1>
+    <p>神の力(人外の力)を宿した『神器』を用いて魔を討つ流派。</p>
+    <p>つまりは神器、或いは呪具などの"魔"の力が宿る武具を退魔に利用することが出来るように体系化したもの。
+        家ごとに代々、強力な神器や呪具を受け継ぐことが多く、一子相伝の傾向がある。</p>
+    <br>
+    <p>彼ら尾羽張が、ただ曰く付きの武具を扱うもの達と一線を画しているのは、尾羽張は神器を扱う為の機構となる点である。
+        即ち、神器や魔剣を人が扱うのではなく、神器や魔剣に”扱われる”のだ。</p>
+    <p>武器は人が制御してこそ等と人々は語るが、彼らにそれは通用しない。
+        彼らにとって、人は武器を十全に扱う為の機構の一部に過ぎないのだ。
+        そう、つまりは尾羽張とは存在そのものが、一つの武器なのである。
+        御雷との連携、協力により最もその力を十全に発揮できるとされる点からも、それは紛れもない事実である。<p>
+    <br>
+    <p>ただし、彼らはそのスタンス故に、時に魔具や神器の力に囚われ、その身を滅ぼす。
+        自滅であればまだよくて、武具の力に完全に取り込まれ、力をただ揮うだけの脅威と変じる事もある。
+        ある種、尾羽張の技術の神髄は、そうならぬ為に培われたものとも言える。</p>
+    <br>
+    <p>また、尾羽張は神器という規格外の武具を扱うこと以外、人の一線を越える必要がない流派である。
+        それ故に、基礎的な戦闘技術に置いては、小碓と共通した技術を持つ。</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_ryuhabox">
+        <h1>尾羽張：術技一覧</h1>
+        <h2><ruby>還戈<rt>かんか</rt></ruby></h2>
+            <p>神力により神器から記録を引き出し、本来あるべき形へと一時的に戻す神の業。</p>
+            <p>遺物たる神器は、代々伝わるものでさえ経年劣化し、完璧な状態で在ることの方が珍しい。
+                故に家によっては代々受け継ぐ武具が、砕けた神器の一欠片ということも珍しくない。
+                あるいは歴史を重ねた中で変質し、かつての姿を失ったものも在る。
+                この神業は本来ある形に戻すことで、武器として在るべき力を引き出すことを可能とする。</p>
+        <br>
+        <h2><ruby>鞘来<rt>しょうらい</rt></ruby></h2>
+            <p>神器に宿る意思と力に身を任せ、自らを神器を納める鞘とする技。</p>
+            <p>即ち、自らを神器の一部とし、武具そのものに使われるための装置と化す。
+                行き過ぎれば神器に取り込まれ、人の道を踏み外す。
+                この御業を成し得るために、尾羽張は神器との対話を重要視する。</p>
+        <br>
+        <h2><ruby>封刀<rt>ふうとう</rt></ruby></h2>
+            <p>神器の持つ力を意図的に制御し、我が身を滅ぼさぬようにする技術。</p>
+            <p>これを成し得る方法は複数存在し、扱う神器や魔具により多種多様ではあるが、大別して二種。
+                ひとつは本来の力を封じ、段階的に封印を解除、事が終われば再封印を行なう手法。
+                もうひとつは神器に宿る意思と対話し、引き出す力を制御する手法である。</p>
+        <br>
+        <h2><ruby>共銘<rt>きょうめい</rt></ruby></h2>
+            <p>神器と心身を重ねることでその力を震わせ、それに反応する、或いは呼応する力を感じ取る技術。</p>
+            <p>探知や解明のための技術であるが、精度を高めれば術者が本来持ちえない超感覚をも実現する。
+                また武具と同調する、という点より疑似的なサイコメトリーのような用途も可能。</p>
+    </div>
+    <br>
+<!-- Script -->
+<script>
+    // メニューアイテムをクリックしたときの処理
+    document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // クリックしたアイテムに「active」クラスをトグル
+            this.classList.toggle('active');
+            
+            // 他のメニューアイテムのサブメニューを非表示にする（オプション）
+            document.querySelectorAll('header .menu-item').forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active');
+                }
+            });
+    
+            // サブメニューが表示されているときにクリックした場合、リンクを遷移させる
+            if (this.classList.contains('active')) {
+                event.stopPropagation();
+            }
+        });
+    });
+    
+    // メニュー外をクリックした場合、サブメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .menu-item')) {
+            document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+                menuItem.classList.remove('active');
+            });
+        }
+    });
+    
+    // サブメニューの表示/非表示を切り替える
+    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('mouseenter', function() {
+            this.classList.add('active'); // サブメニューを表示
+        });
+        menuItem.addEventListener('mouseleave', function() {
+            this.classList.remove('active'); // サブメニューを非表示
+        });
+    });
+    
+    // "設定"リンクの遷移を無効にする
+    document.querySelector('a[href="SETTING.html"]').addEventListener('click', function(event) {
+        event.preventDefault(); // これで遷移を防止
+    });
+</script>
+</body>
+</html>

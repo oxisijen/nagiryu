@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Yuji+Boku&family=Yuji+Syuku&display=swap');
+
+body {
+    background-size: cover;
+    background-image: url("image/okumono_blackwa1.png");
+    margin: 0;
+    padding: 0;
+    display: flex; /* 子要素を中央寄せするためにフレックスボックスを使用 */
+    flex-direction: column;/* フレックスアイテムを縦方向に並べる */
+    justify-content: center; /* 縦方向の中央寄せ */
+    align-items: center; /* 水平方向の中央寄せ */ 
+    min-height: 100vh; /* コンテンツを画面全体の高さに収める */
+}
+
+/* テキスト */
+p {
+    color: rgb(255, 255, 255); /* 白色 */  
+    line-height: 1.6; /* 行間を少し広げる */
+    font-family: "Kaisei HarunoUmi", serif;
+}
+
+/* 汎用ボックス用 */
+.content_box { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* 流派box */
+.content_ryuhabox { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+
+.content_ryuhabox  h1{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(0, 0, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 30px; /* フォントサイズを大きくする */
+    font-weight: 150; /* 文字を細くする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    background-color: rgb(100, 215, 255); /* 背景色を薄い白に設定（例） */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+}
+.content_ryuhabox h2{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(101, 255, 214); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 24px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid #5fb7ffd7; /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+
+.content_ryuhabox p{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    margin-left: 12px;  /* 右にずらす */
+    margin-right: 12px;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* 魔box */
+.content_enemybox { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+
+.content_enemybox  h1{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(0, 0, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 30px; /* フォントサイズを大きくする */
+    font-weight: 150; /* 文字を細くする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    background-color: rgb(200, 137, 255); /* 背景色を薄い白に設定（例） */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+}
+.content_enemybox h2{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(255, 90, 90); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 24px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid rgba(255, 0, 0, 0.842); /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+
+.content_enemybox p{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    margin-left: 12px;  /* 右にずらす */
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* FAQbox */
+.content_faqbox { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+
+.content_faqbox  h1{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(0, 0, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 30px; /* フォントサイズを大きくする */
+    font-weight: 150; /* 文字を細くする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    background-color: rgb(87, 255, 81); /* 背景色を薄い白に設定（例） */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+}
+.content_faqbox h2{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(255, 241, 137); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 24px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid rgba(253, 186, 0, 0.842); /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+.content_faqbox h3{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    font-family: "Kaisei HarunoUmi", serif;
+    margin-left: 15px;  /* 右にずらす */
+}
+
+.content_faqbox p{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    margin-left: 12px;  /* 右にずらす */
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* 設定box */
+.content_setbox { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+.content_setbox  h2{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(0, 0, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 30px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    background-color: rgb(100, 215, 255); /* 背景色を薄い白に設定（例） */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+}
+.content_setbox  h3{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(255, 178, 116); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 24px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid rgba(255, 100, 100, 0.842); /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+.content_setbox h3 ~ p {
+    margin-left: 24px;  /* 右にずらす */
+}
+.content_setbox  p{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    margin-left: 12px;  /* 右にずらす */
+    margin-right: 12px;
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* PLANbox */
+.content_planbox { 
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+.content_planbox  h2{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(0, 0, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    border-radius: 5px; /* 角を丸くする */
+    font-size: 30px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    background-color: rgb(255, 248, 154); /* 背景色を薄い白に設定（例） */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+}
+.content_planbox  h3{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(176, 237, 255); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 24px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid rgba(139, 255, 240, 0.5); /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+.content_planbox h3 ~ p {
+    margin-left: 24px;  /* 右にずらす */
+}
+.content_planbox  p{
+    margin-top: 0; /* 上の余白をゼロに設定 */
+    margin-bottom: 0; /* 下の余白をゼロに設定 */
+    margin-left: 12px;  /* 右にずらす */
+}
+
+/* ヘッダー内のリンク */
+header {
+    position: fixed; /* 画面に固定 */
+    top: 0;
+    left: 0;
+    height: 100%; /* 画面の高さ全体を使用 */
+    width: 200px; /* メニューバーの幅 */
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を黒に近い透過色 */
+    padding: 20px 0; /* 内側の上下余白 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* 右側に影を追加 */
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* TOPボックス用 */
+.content_topbox { 
+    background-color: rgba(0, 0, 0, 0.01); /* 背景を少し透過させる */
+    padding: 20px; /* 内側余白 */
+    width: 80%; /* 全体幅に対する横幅 */
+    max-width: 800px; /* 最大幅を指定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.005); /* 立体感を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    text-align: left; /* コンテンツは左寄せ */
+    color: white; /* 文字色 */
+}
+
+
+
+/* 退魔術『那岐流』のタイトルに背景画像を設定 */
+.highlighted-title {
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(255, 243, 190); /* 文字色 */
+    padding: 20px; /* 内側の余白を追加 */
+    text-align: left; /* 中央寄せ */
+    border-radius: 10px; /* 角を丸くする */
+    font-size: 56px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Boku", serif;
+    font-weight: 300; /* 文字を細くする */
+    transform: none; /* 文字は回転させない */
+    z-index: 1; /* 文字が画像の前に来るように */
+    top: 52px; /* ここで位置を調整して、タイトルを下に動かす */
+}
+
+.highlighted-title::before {
+    content: ''; /* 擬似要素を使うために必須 */
+    position: absolute; /* 親要素に対して絶対位置 */
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background-image: url('image/ken.png'); /* 背景画像を擬似要素に設定 */
+    background-size: cover; /* 画像を要素のサイズに合わせて拡大・縮小 */
+    background-position: left; /* 画像を左に配置 */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    transform: rotate(5deg); /* 画像を斜めに回転させる */
+    transform-origin: center center; /* 回転の基準を中央に設定 */
+    z-index: -1; /* 画像が文字の後ろに配置されるように */
+}
+
+/* 小さな文字のスタイル */
+.highlighted-title .small-text {
+    background-color: rgba(0, 0, 0, 0.025); /* 背景を少し透過させる */
+    border-radius: 10px; /* 角を丸くする */
+    position: absolute; /* 文字を絶対位置に */
+    top: -30px; /* 小さな文字の上位置を調整 */
+    left: -20px; /* 小さな文字の左位置を調整 */
+    font-size: 24px; /* 小さな文字のフォントサイズ */
+    color: rgb(232, 195, 255); /* 小さな文字の色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 文字に影をつけて見やすく */
+    font-weight: normal; /* 標準の文字の太さ */
+    z-index: 2; /* 小さな文字を背景の上に表示 */
+}
+
+/* スペースを調整 */
+.highlighted-title ruby {
+    font-size: 1.0em; /* 小さなルビのサイズ調整 */
+}
+/* ルビサイズ */
+.highlighted-title ruby rt {
+    font-size: 0.35em; /* ふりがな自体は少し小さく調整 */
+}
+
+/* 注意書き部分 */
+.tyuigaki {
+    color: rgb(190, 255, 198); /* 白色 */  
+    font-family: "Kaisei HarunoUmi", serif;
+    text-align: left; /* 寄せ */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Boku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-left: 24px; /* 文字開始位置をずらす */
+}
+
+/* 更新履歴のボックス */
+.content_topbox.history {
+    background-color: rgba(245, 250, 251, 0.9); /* 背景色を白に */
+    color: black; /* テキスト色を黒に */
+    padding-bottom: 10px; /* ボックスの下の余白を調整（少し減らす） */
+}
+
+/* 更新履歴タイトル */
+.content_topbox.history h2 {
+    text-align: center; /* テキストを中央に寄せる */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5); /* より目立つ太い横線 */
+    padding-bottom: 10px; /* 横線とタイトルの間に余白を追加 */
+    margin-bottom: 20px; /* 下の余白を少し増加 */
+    margin-top: 0px; /* タイトルの上の余白を減少（ここを調整） */
+    color: rgb(0, 0, 0); /* 水色の文字色 */
+}
+
+/* 更新履歴の各エントリをスタイル */
+.content_topbox.history .history-entry{
+    background-color: rgba(255, 255, 255, 1.0); /* 薄い黒背景 */
+    padding: 10px; /* 内側の余白 */   
+    border-radius: 2.5px; /* 角を丸く */
+    margin-bottom: 10px; /* エントリ間の余白 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 少し影をつける */
+    border-left: 5px solid rgb(173, 216, 230); /* 左側にライトブルーの縦線 */
+}
+
+/* 更新履歴の日付スタイル */
+.content_topbox.history h3 {
+    color: rgb(0, 176, 240); /* 水色 */
+    margin: 0; /* 上下の余白をなくす */
+}
+
+/* 内容のスタイル */
+.content_topbox.history p {
+    color: rgb(0, 0, 0); /* 水色 */
+    margin-top: 5px; /* 上部に少し余白 */
+}
+
+/* ───────────────────────────────────────────────────────────────── */
+/* ヘッダー内のリンク */
+header {
+    position: fixed; /* 画面に固定 */
+    top: 0;
+    left: 0;
+    height: 100%; /* 画面の高さ全体を使用 */
+    width: 200px; /* メニューバーの幅 */
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を黒に近い透過色 */
+    padding: 20px 0; /* 内側の上下余白 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* 右側に影を追加 */
+}
+
+/* メニューのスタイル */
+header ul {
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start; /* 左寄せ */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* リストマーカーを非表示 */
+}
+
+header ul a {
+    display: block; /* リンクをブロック要素にして幅を全て使う */
+    padding: 10px 20px; /* 内側余白 */
+    color: white; /* リンクの文字色 */
+    text-decoration: none; /* 下線を消す */
+    background-color: rgba(0, 0, 0, 0.1); /* 背景色を黒に */
+    border-radius: 8px; /* 角を丸くする */
+    margin: 5px 0; /* 各リンクの間に余白 */
+    text-align: center; /* テキストを中央寄せ */
+    font-family: "Yuji Syuku", serif; /* フォント */
+    font-size: 24px;
+    font-weight: 300;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバー時の背景色とアニメーション */
+}
+
+header ul a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* ホバー時の背景色 */
+    color: rgb(154, 211, 255); /* ホバー時の文字色 */
+    transform: translateX(5px); /* 少し右にスライドするアニメーション */
+}
+
+/* サブメニューのスタイル */
+header .menu-item {
+    position: relative; /* 親要素を相対位置に設定 */
+}
+
+/* サブメニューのスタイル */
+header .submenu {
+    display: none; /* 初期状態では非表示 */
+    position: absolute;
+    left: 100%; /* 親メニューから横にずらす */
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    width: 220px;
+    opacity: 0; /* 初期状態では透明 */
+    transform: translateY(-20px); /* 初期状態で少し上にずらしておく */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* スムーズなアニメーション */
+}
+
+/* サブメニューが表示されたとき */
+header .menu-item.active .submenu {
+    display: block; /* "active" クラスが追加された場合に表示 */
+    opacity: 1; /* 表示時は不透明 */
+    transform: translateY(0); /* 元の位置に戻す */
+}
+
+header .menu-item:hover .submenu {
+    display: block; /* ホバー時にサブメニューを表示 */
+}
+
+header .submenu li {
+    width: 100%; /* サブメニューアイテムの幅を調整 */
+}
+
+/* サブメニュー内のリンク */
+header .submenu li a {
+    display: inline-block;/* リンクをブロック要素にして幅を全て使う */
+    padding: 10px 20px; /* 内側余白 */
+    color: white; /* リンクの文字色 */
+    text-decoration: none; /* 下線を消す */
+    background-color: rgba(0, 0, 0, 0.8); /* 背景色を黒に */
+    border-radius: 8px; /* 角を丸くする */
+    margin: 5px 0; /* 各リンクの間に余白 */
+    text-align: left; /* テキストを左寄せ */
+    font-family: "Yuji Syuku", serif; /* フォント */
+    font-size: 20px; /* フォントサイズ */
+    font-weight: 300;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバー時の背景色とアニメーション */
+}
+
+/* サブメニューリンクにホバー時のスタイル */
+header .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* ホバー時の背景色 */
+    color: rgb(154, 211, 255); /* ホバー時の文字色 */
+    transform: translateX(5px); /* 少し右にスライドするアニメーション */
+}
