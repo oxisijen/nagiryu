@@ -32,6 +32,28 @@ p {
 }
 
 /* ───────────────────────────────────────────────────────────────── */
+/* Discordリンクのボタン風デザイン */
+.discord-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #7289da; /* Discordの公式色 */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 28px; /* 少し右に寄せる（pxの値で調整） */
+}
+
+.discord-button:hover {
+    background-color: #5b6eae; /* ホバー時の色 */
+}
+
+.discord-button:active {
+    background-color: #4a5a8e; /* クリック時の色 */
+}
+/* ───────────────────────────────────────────────────────────────── */
 /* 流派box */
 .content_ryuhabox { 
     background-color: rgba(0, 0, 0, 0.8); /* 背景を少し透過させる */
@@ -132,6 +154,38 @@ p {
     margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
     border-bottom: 2px solid rgba(255, 0, 0, 0.842); /* より目立つ太い横線 */
     margin-left: 6px;  /* 右にずらす */
+}
+.content_enemybox h3{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(229, 255, 0); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 5px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 5px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 20px; /* フォントサイズを大きくする */
+    line-height: 1.4; /* 行間を広げて、読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 5px; /* 下の余白を少し調整（必要に応じて変更） */
+    border-bottom: 2px solid rgba(229, 255, 0, 0.842); /* より目立つ太い横線 */
+    margin-left: 6px;  /* 右にずらす */
+}
+.content_enemybox h4{
+    position: relative; /* 親要素の位置を基準にする */
+    color: rgb(148, 191, 255); /* 文字色 */
+    padding: 5px; /* 内側の余白を追加 */
+    padding-top: 0px; /* 上の内部余白を少なく設定 */
+    padding-bottom: 0px; /* 下の内部余白を少なく設定 */
+    text-align: left; /* 左寄せ */
+    font-size: 14px; /* フォントサイズを大きくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて見やすく */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 300; /* 文字を細くする */
+    margin-top: 0; /* 上の余白を0に設定 */
+    margin-bottom: 0px; /* 下の余白を少し調整（必要に応じて変更） */
+    margin-left: 36px;  /* 右にずらす */
 }
 
 .content_enemybox p{

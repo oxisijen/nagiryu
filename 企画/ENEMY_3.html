@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妖魔</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul>
+          <a href="index.html">TOP</a>
+          <a href="PLAN.html">企画概要</a>
+          <li class="menu-item">
+            <a href="SETTING.html">設定</a>
+            <ul class="submenu">
+                <li><a href="SETTING.html">退魔術『那岐流』</a></li>
+                <li><a href="MIKADUTI.html">・御雷</a></li>
+                <li><a href="OHABARI.html">・尾羽張</a></li>
+                <li><a href="TAMAYORI.html">・玉依</a></li>
+                <li><a href="OUSU.html">・小碓</a></li>
+            </ul>
+          </li>
+          <a href="FAQ.html">FAQ</a>
+          <a href="ENEMY.html">「魔」</a>
+        </ul>
+    </header>
+    <br>
+    <div class="content_enemybox">
+    <h1><ruby>妖魔<rt>ようま</rt></ruby></h1>
+        <p>人の想念より産まれた「魔」。その中でも特異な穢れし者たち。
+ただ存在するだけで人の世を穢して行く存在であり、人の恐れや憎悪といった負の感情が集積した結果として生じるとされる。その出自故か人々を狙い、災いを無差別に振りまく。</p>
+        <br>
+        <p>凶悪なのは彼らの生態で在り、彼らは人々に憑りついたり呪うことはあっても殺すことはない。その存在を穢し、恐怖や憎悪を育むことで”糧”とするのだ。彼らにとって人間とは肥沃や養分を産み出す家畜であり、新たな同胞を産み出す苗床なのである。</p>
+        <br>
+        <p>また、彼らは何故かは定かでないが、人々の中でも特に「人から外れつつある者」を狙うとされる。那岐流の使い手はまさしくその尤もたる例であり、過去に犠牲となったものも少なくない。中には自らの意思で妖魔に組した使い手たちも存在し、「蛭子」とも称される彼らは、当然ながら那岐流にとって不倶戴天の天敵と言える。そうした経緯から那岐流にとっても要警戒対象とされている。</p>
+    </div>
+    <br>
+    <!-- 区切り -->
+    <div class="content_enemybox">
+    <h1>「魔」を率いる者たち</h1>
+    <h2><ruby>蛭子<rt>ひるこ</rt></ruby></h2>
+        <p>那岐流の使い手だった者が妖魔に堕ちた存在。</p>
+        <p>かつての技や信念は穢れに歪められ、今では妖魔の尖兵として暗躍している。</p>
+        <p>その出自からか、人間社会の中でも彼らはその正体を隠し暗躍する。</p>
+        <p>裏社会に根を伸ばし、社会的な力を利用することで彼らは人を陥れるのだ。</p>
+        <br>
+        <h4>無間の鏡　　　　”何か”と繋がってしまった御雷の元後継者。因果や並行世界を見通すと言うが…。</h4>
+        <h4>淀みし刃　　　　神器に呑まれ己を失った尾羽張の天才児だった者。その技だけは今も陰りを見せない。</h4>
+        <h4>血塗られた経典　異界の書や信仰を取り込んだ果てに妖魔へと堕ちた玉依の異端者。異形の怪物を操る。</h4>
+        <h4>淀みの血色　　　純然たる肉体と格闘術の強さを追い求め、妖魔へと到ってしまった小碓の求道者。</h4>
+        <h4>虚無よりの唄　　死者や怨念にその魂を呑まれ、それらを生み出す者へと変じた巫女の末路。</h4>
+        <h4>…etc</h4>
+    <br>
+    <h2>在野の妖魔</h2>
+        <p>最も多様にして、文字通りの魑魅魍魎を体現する者たち。</p>
+        <p>妖魔ごとにその性質も、能力も、その活動目的も異なっており、一概に語る事は出来ない。</p>
+        <p>ただ唯一共通しているのは、それが人にとって脅威となる存在である事だ。</p>
+        <br>
+        <h4>涅狐　　　　　　かつて御雷家の退魔師に討伐され、玉依家によって調伏された大悪妖とされているが……。
+        <h4>兇眼　　　　　　人を惑わし、その身に憑りつく妖魔。瞳に魅入られた人間に巣食う、妖魔らしい妖魔。
+        <h4>雪女／源時代　　鏡心流の創始者と同じ名を持つ妖魔。伝承に語る雪女と同様の能力を有する刀使い。
+        <h4>……etc</h4>
+    </div>
+    <br>
+<!-- Script -->
+<script>
+    // メニューアイテムをクリックしたときの処理
+    document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            // クリックしたアイテムに「active」クラスをトグル
+            this.classList.toggle('active');
+            
+            // 他のメニューアイテムのサブメニューを非表示にする（オプション）
+            document.querySelectorAll('header .menu-item').forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active');
+                }
+            });
+    
+            // サブメニューが表示されているときにクリックした場合、リンクを遷移させる
+            if (this.classList.contains('active')) {
+                event.stopPropagation();
+            }
+        });
+    });
+    
+    // メニュー外をクリックした場合、サブメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .menu-item')) {
+            document.querySelectorAll('header .menu-item').forEach(function(menuItem) {
+                menuItem.classList.remove('active');
+            });
+        }
+    });
+    
+    // サブメニューの表示/非表示を切り替える
+    document.querySelectorAll('.menu-item').forEach(function(menuItem) {
+        menuItem.addEventListener('mouseenter', function() {
+            this.classList.add('active'); // サブメニューを表示
+        });
+        menuItem.addEventListener('mouseleave', function() {
+            this.classList.remove('active'); // サブメニューを非表示
+        });
+    });
+    
+    // "設定"リンクの遷移を無効にする
+    document.querySelector('a[href="SETTING.html"]').addEventListener('click', function(event) {
+        event.preventDefault(); // これで遷移を防止
+    });
+</script>
+</body>
+</html>
